@@ -124,7 +124,7 @@ export const MovementProvider = (props) => {
     // e.preventDefault();
     const delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
     const newScale = delta > 0 ? scale * 1.05 : scale / 1.05;
-    if (newScale < 0.7 || newScale > 8) return;
+    if (newScale < 0.1 || newScale > 8) return;
 
     const xs = (e.clientX - pointX) / scale;
     const ys = (e.clientY - pointY) / scale;
