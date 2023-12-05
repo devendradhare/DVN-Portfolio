@@ -1,0 +1,37 @@
+.socialSection {
+    position: absolute;
+}
+
+.socialSection * {
+    margin: 2px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mailCopyed {
+    color: rgb(0, 0, 0, 0);
+}
+
+.mailCopyedAnimation {
+    color: greenyellow;
+    margin: 0 30px;
+    animation-duration: 1s;
+    animation-name: asdf;
+}
+
+@keyframes asdf {
+    from {
+        font-size: 0px;
+    }
+
+    50% {
+        color: greenyellow;
+    }
+
+    to {
+        font-size: 20px;
+        color: rgb(0, 0, 0, 0);
+        margin: 0 0px;
+    }
+}

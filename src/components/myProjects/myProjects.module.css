@@ -1,0 +1,13 @@
+.discription {
+    width: 300px;
+    z-index: -1;
+    left: -120px;
+    top: -65px;
+    transition-duration: .5s;
+}
+
+.discription:hover {
+    z-index: 1;
+    transform: scale(1.05);
+    transition-duration: .5s;
+}

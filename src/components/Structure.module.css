@@ -1,0 +1,87 @@
+#zoom_outerid {
+    color: white;
+    height: 100vh;
+    background: rgb(26, 30, 35);
+    font-family: 'Patrick Hand SC', cursive;
+
+}
+
+#zoom_outerid>p {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+#zoom {
+    background: rgba(96, 228, 255, 0.214);
+    transform-origin: 0px 0px;
+    transform: scale(1) translate(0px, 0px) ease;
+    transition-duration: 100ms;
+    /* cursor: grab; */
+    overflow: visible;
+
+    /* width: 600px; */
+    display: inline-block;
+    /* height: 100px; */
+}
+
+.zone {
+    font-size: 40px;
+    position: absolute;
+}
+
+.MySkills {
+    top: 250px;
+    left: 150px;
+}
+
+
+/* delete it */
+.initialLink {
+    background: #ffffff;
+    display: inline-block;
+    padding: 10px;
+}
+
+.node {
+    background: #00000048;
+    position: absolute;
+    overflow: visible;
+}
+
+.animatedSvg path {
+    animation: pathAnimation 4s ease-in-out infinite;
+}
+
+@keyframes pathAnimation {
+    0% {
+        d: path("M200,-750 Q400 400, 900, -100 ");
+    }
+
+    50% {
+        d: path("M200,-750 Q150 400, 900, -100 ");
+    }
+
+    100% {
+        d: path("M200,-750 Q400 400, 900, -100 ");
+    }
+}
+
+.objective {
+    left: -500px;
+    top: 100px;
+    width: 550px;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'Patrick Hand SC', cursive;
+}
+
+.skills {
+    /* background: rgb(43, 45, 45); */
+    position: absolute;
+    width: 600px;
+    display: flex;
+    align-items: center;
+}
