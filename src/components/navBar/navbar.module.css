@@ -24,6 +24,7 @@
 .buttons{
     display: flex;
     align-items: center;
+    margin: 3px 0;
 }
 
 @media screen and (max-width: 850px) {
