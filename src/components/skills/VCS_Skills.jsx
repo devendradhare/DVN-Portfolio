@@ -1,3 +1,5 @@
+import React from 'react';
+
 import githubIcon from "../icons/github.svg";
 import gitIcon from "../icons/git.svg";
 const VCS_Skills = () => {

@@ -1,3 +1,4 @@
+import React from 'react';
 import Style from "./myCertificate.module.css";
 import c_certificate from "./certificates/C_Language.svg";
 import cpp from "./certificates/CPP_With_STL.svg";

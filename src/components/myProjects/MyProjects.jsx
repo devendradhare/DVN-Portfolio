@@ -1,3 +1,4 @@
+import React from 'react';
 import TicTacToeScreenshort from "./projectImgs/tic_tac_toe_screenshort.png";
 import LiveBusScreenshort from "./projectImgs/LiveBus.jfif";
 // Styles

@@ -1,3 +1,4 @@
+import React from 'react';
 import myResume from "./Devendra-dhare-resume.pdf";
 // import tieIcon from "../icons/resume_tie.svg";
 import tieIcon from "../icons/resume.svg";

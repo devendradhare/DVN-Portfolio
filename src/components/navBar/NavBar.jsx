@@ -1,3 +1,4 @@
+import React from 'react';
 // MUI components
 import Button from "@mui/material/Button";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";

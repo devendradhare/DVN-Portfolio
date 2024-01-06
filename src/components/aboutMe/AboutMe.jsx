@@ -1,3 +1,4 @@
+import React from 'react';
 import Style from "./AboutMe.module.scss";
 import me from "./main.png";
 import { Box } from "@mui/material";

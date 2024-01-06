@@ -1,3 +1,4 @@
+import React from 'react';
 // styles
 import styles from "./Structure.module.css";
 // My components
