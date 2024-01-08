@@ -29,3 +29,32 @@
     font-size: 18px;
     font-family: 'Patrick Hand SC', cursive;
 }
+
+.antennaSvg {
+    /* background: #000; */
+    transform-origin: 32px 70px;
+    animation: antennaSvgAnm 3.5s ease-out infinite;
+    animation-direction: alternate;
+}
+
+.antennaSvgPosition {
+    width: 95px;
+    top: 48px;
+    left: 385px;
+}
+
+@keyframes antennaSvgAnm {
+    100% {
+        transform: rotateZ(-30deg);
+    }
+}
+
+.antennaSignal {
+    animation: dvn 2s infinite;
+}
+
+@keyframes dvn {
+    0% {
+        d: path("")
+    }
+}

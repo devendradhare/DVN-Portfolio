@@ -1,18 +1,16 @@
-import React from 'react';
+import React from "react";
 // styles
 import styles from "./Structure.module.css";
 // My components
 import AboutMe from "./aboutMe/AboutMe";
 import NavBar from "./navBar/NavBar";
-import FrontendSkills from "./skills/FrontendSkills";
-import BackendSkills from "./skills/BackendSkills";
-import ProgrammingSkills from "./skills/ProgrammingSkills";
-import VCS_Skills from "./skills/VCS_Skills";
+import Skills from "./skills/Skills";
 import ContactMe from "./contactMe/ContactMe";
 import Social from "./social/Social";
 import MyProjects from "./myProjects/MyProjects";
 import MyCertificate from "./myCertificate/MyCertificate";
 import Resume from "./resume/Resume";
+import HowToNavigate from "./howToNavigate/HowToNavigate";
 // MUI components
 import Button from "@mui/material/Button";
 // context api
@@ -54,12 +52,12 @@ const AppStructure = () => {
         {/* <AppBar />   */}
         <div id={styles.zoom}>
           <AboutMe className={styles.aboutMe} />
-          <div className={styles.objective}>
+          <p className={styles.objective}>
             Welcome to my portfolio! I am a passionate Full Stack Web Developer
             with expertise in the MERN stack. I am dedicated to contributing to
             dynamic web projects while continually expanding my skills in web
             development.
-          </div>
+          </p>
 
           <Button
             // go to contact me zone
@@ -75,39 +73,29 @@ const AppStructure = () => {
             contect
           </Button>
 
-          <MyProjects />
           <ContactMe />
           <Social />
+          <MyProjects />
           <MyCertificate left={"-50px"} top={"700px"} />
           <Resume left={"-950px"} top={"430px"} />
+          <Skills />
+          <HowToNavigate left={"-1700px"} top={"10px"} />
+          {/* <iframe
+            style={{
+              position: "absolute",
+              left: "100cm",
+              width: "400px",
+              height: "220px",
+            }}
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/videoseries?si=e55botaR9s58UjPB&amp;list=PL4Ka9zULN8JjvuWQMfTRHu7fBZ53r8Fu-"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe> */}
 
-          <section className={`${styles.MySkills} ${styles.zone}`}>
-            Skills
-          </section>
-          <div
-            className={styles.skills}
-            style={{ top: "200px", left: "330px" }}
-          >
-            <FrontendSkills />
-          </div>
-          <div
-            className={styles.skills}
-            style={{ top: "300px", left: "330px" }}
-          >
-            <BackendSkills />
-          </div>
-          <div
-            className={styles.skills}
-            style={{ top: "400px", left: "330px" }}
-          >
-            <ProgrammingSkills />
-          </div>
-          <div
-            className={styles.skills}
-            style={{ top: "500px", left: "330px" }}
-          >
-            <VCS_Skills />
-          </div>
           <svg
             className={`${styles.node}`}
             width="1"

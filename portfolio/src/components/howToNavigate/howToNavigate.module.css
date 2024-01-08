@@ -1,0 +1,36 @@
+.navigateSection {
+    position: absolute;
+}
+
+.navigateSection>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigateSection>span {
+    font-size: 35px;
+}
+
+.navigateSection p {
+    font-size: 22px;
+    width: 350px;
+    text-align: center;
+}
+
+.mouseAnimation {
+    transform-origin: 33px 20px;
+    animation: mouseScrollAnimation 1.5s ease infinite;
+    animation-delay: .3s;
+}
+
+@keyframes mouseScrollAnimation {
+    70% {
+        transform: rotateZ(-720deg);
+    }
+
+    100% {
+        transform: rotateZ(-720deg);
+    }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from "./AboutMe.module.scss";
+import Style from "./AboutMe.module.css";
 import me from "./main.png";
 import { Box } from "@mui/material";
 

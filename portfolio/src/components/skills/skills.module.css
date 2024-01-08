@@ -1,0 +1,15 @@
+.MySkills {
+    top: 250px;
+    left: 150px;
+}
+.skills {
+    /* background: rgb(43, 45, 45); */
+    position: absolute;
+    width: 600px;
+    display: flex;
+    align-items: center;
+}
+.zone {
+    font-size: 40px;
+    position: absolute;
+}

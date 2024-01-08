@@ -1,0 +1,79 @@
+:root {
+    --black: rgba(0, 0, 0, 1);
+}
+
+.shadowed {
+    filter: drop-shadow(4px 4px 3px var(--black));
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Patrick Hand SC', cursive;
+}
+
+.hand {
+    animation-name: wave;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+a {
+    color: #f8f8f8;
+    transition: color 200ms ease;
+}
+
+a:hover {
+    color: #c9c9c9;
+    transition: color 200ms ease;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(14deg);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        transform: rotate(14deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.aboutMe {
+    position: absolute;
+    left: -950px;
+    top: -200px;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+}
