@@ -1,6 +1,6 @@
-import React from "react";
-// styles
-import styles from "./Structure.module.css";
+import React, { useState } from "react";
+// Style
+import Style from "./Structure.module.css";
 // My components
 import AboutMe from "./aboutMe/AboutMe";
 import NavBar from "./navBar/NavBar";
@@ -29,12 +29,19 @@ const AppStructure = () => {
     handleTouchMove,
     handleTouchEnd,
   } = useMovement();
+  const [diviceNotice, setDiviceNotice] = useState(true);
 
   return (
     <>
       <NavBar></NavBar>
+      <section className={diviceNotice ? Style.diviceNotice : " "}>
+        <div>
+          <p>For a better experience, open it on your computer</p>
+          <button onClick={() => setDiviceNotice(false)}>Open Anyway</button>
+        </div>
+      </section>
       <div
-        id={styles.zoom_outerid}
+        id={Style.zoom_outerid}
         onMouseMove={handleMouseMove}
         onTouchMove={handleTouchMove}
         onTouchStart={handleTouchStart}
@@ -50,9 +57,9 @@ const AppStructure = () => {
           <span>key : {arrowKeyPressed}</span>
         </p> */}
         {/* <AppBar />   */}
-        <div id={styles.zoom}>
-          <AboutMe className={styles.aboutMe} />
-          <p className={styles.objective}>
+        <div id={Style.zoom}>
+          <AboutMe className={Style.aboutMe} />
+          <p className={Style.objective}>
             Welcome to my portfolio! I am a passionate Full Stack Web Developer
             with expertise in the MERN stack. I am dedicated to contributing to
             dynamic web projects while continually expanding my skills in web
@@ -80,24 +87,9 @@ const AppStructure = () => {
           <Resume left={"-950px"} top={"430px"} />
           <Skills />
           <HowToNavigate left={"-1700px"} top={"10px"} />
-          {/* <iframe
-            style={{
-              position: "absolute",
-              left: "100cm",
-              width: "400px",
-              height: "220px",
-            }}
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/videoseries?si=e55botaR9s58UjPB&amp;list=PL4Ka9zULN8JjvuWQMfTRHu7fBZ53r8Fu-"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe> */}
 
           <svg
-            className={`${styles.node}`}
+            className={`${Style.node}`}
             width="1"
             height="1"
             xmlns="http://www.w3.org/2000/svg"
