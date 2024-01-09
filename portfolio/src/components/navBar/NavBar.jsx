@@ -64,9 +64,9 @@ const NavBar = () => {
         </Button>
         <Button
           onClick={() => {
-            setPointX(-100);
-            setPointY(550);
-            setScale(1);
+            setPointX(-500);
+            setPointY(-2000);
+            setScale(1.4);
           }}
           sx={{ margin: "0 5px" }}
           variant="outlined"

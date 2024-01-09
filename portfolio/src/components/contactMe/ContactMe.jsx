@@ -7,7 +7,7 @@ import styles from "./contactMe.module.css";
 // SVGs
 import antenna from "../icons/antenna.svg";
 
-const ContactMe = () => {
+const ContactMe = ({ left, top }) => {
   const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_KEY);
   const { setNotInsideAnyElement } = useMovement();
   const [antennaAnimation, setAntennaAnimation] = useState(false);
@@ -19,15 +19,12 @@ const ContactMe = () => {
     mailRef.current.value = "";
     messageRef.current.value = "";
   }
-  useEffect(() => {
-    setAntennaAnimation(false);
-  }, [state.succeeded]);
+  // useEffect(() => {
+  //   setAntennaAnimation(false);
+  // }, [state.succeeded]);
 
   return (
-    <section
-      className={`${styles.contactMeSection}`}
-      style={{ left: "400px", top: "-475px" }}
-    >
+    <section className={`${styles.contactMeSection}`} style={{ left, top }}>
       <span>Contect me</span>
       <p style={{ fontSize: "18px", textAlign: "center", padding: " 10px" }}>
         Feel free to Contact me by submitting the form below and I will get back
@@ -212,6 +209,36 @@ const ContactMe = () => {
               strokeLinejoin="round"
             />
           </svg>
+          {/* <svg
+            // viewBox="10 44 82 12"
+            fill="#ffffff"
+            style={{
+              width: "100px",
+              position: "absolute",
+              left: "370px",
+              top: "100",
+              // background:"red"
+              transform: "rotateZ(-20deg)",
+              overflow: "visible"
+            }}
+          >
+            <path
+              d="
+             M8.4,47c0.5,0,1.2,2.3,1.5,3.3c0.7,2.3,1.4,4.7,3.4,4.7s2.7-2.4,3.4-4.7c0.3-1,1-3.3,1.5-3.3c0.5,0,1.2,2.3,1.5,3.3  
+             c0.7,2.3,1.4,4.7,3.4,4.7s2.7-2.4,3.4-4.7c0.3-1,1-3.3,1.5-3.3c0.5,0,1.2,2.3,1.5,3.3c0.7,2.3,1.4,4.7,3.4,4.7c2,0,2.7-2.4,3.4-4.7  
+             c0.3-1,1-3.3,1.5-3.3c0.5,0,1.2,2.3,1.5,3.3c0.7,2.3,1.4,4.7,3.4,4.7c2,0,2.7-2.4,3.4-4.7c0.3-1,1-3.3,1.5-3.3  
+             c0.5,0,1.2,2.3,1.5,3.3c0.7,2.3,1.4,4.7,3.4,4.7c2,0,2.7-2.4,3.4-4.7c0.3-1,1-3.3,1.5-3.3s1.2,2.3,1.5,3.3c0.7,2.3,1.4,4.7,3.4,4.7   s2.7-2.4,3.4-4.7c0.3-1,1-3.3,1.5-3.3c0.5,0,1.2,2.3,1.5,3.3c0.7,2.3,1.4,4.7,3.4,4.7c2,0,2.7-2.4,3.4-4.7c0.3-1,1-3.3,1.5-3.3  
+             c0.5,0,1.2,2.3,1.5,3.3c0.7,2.3,1.4,4.7,3.4,4.7c2,0,2.7-2.4,3.4-4.7c0.3-1,1-3.3,1.5-3.3s1.2,2.3,1.5,3.3c0.7,2.3,1.4,4.7,3.4,4.7  
+             c0.6,0,1-0.4,1-1s-0.4-1-1-1c-0.5,0-1.2-2.3-1.5-3.3c-0.7-2.3-1.4-4.7-3.4-4.7s-2.7,2.4-3.4,4.7c-0.3,1-1,3.3-1.5,3.3  
+             c-0.5,0-1.2-2.3-1.5-3.3C79.7,47.4,79,45,77,45c-2,0-2.7,2.4-3.4,4.7c-0.3,1-1,3.3-1.5,3.3c-0.5,0-1.2-2.3-1.5-3.3  
+             c-0.7-2.3-1.4-4.7-3.4-4.7c-2,0-2.7,2.4-3.4,4.7c-0.3,1-1,3.3-1.5,3.3s-1.2-2.3-1.5-3.3c-0.7-2.3-1.4-4.7-3.4-4.7s-2.7,2.4-3.4,4.7  
+             c-0.3,1-1,3.3-1.5,3.3c-0.5,0-1.2-2.3-1.5-3.3c-0.7-2.3-1.4-4.7-3.4-4.7c-2,0-2.7,2.4-3.4,4.7c-0.3,1-1,3.3-1.5,3.3  
+             c-0.5,0-1.2-2.3-1.5-3.3c-0.7-2.3-1.4-4.7-3.4-4.7c-2,0-2.7,2.4-3.4,4.7c-0.3,1-1,3.3-1.5,3.3c-0.5,0-1.2-2.3-1.5-3.3  
+             C30.7,47.4,30,45,28,45c-2,0-2.7,2.4-3.4,4.7c-0.3,1-1,3.3-1.5,3.3s-1.2-2.3-1.5-3.3c-0.7-2.3-1.4-4.7-3.4-4.7  
+             c-2,0-2.7,2.4-3.4,4.7c-0.3,1-1,3.3-1.5,3.3c-0.5,0-1.2-2.3-1.5-3.3c-0.7-2.3-1.4-4.7-3.4-4.7c-0.6,0-1,0.4-1,1S7.8,47,8.4,47z
+             "
+            />
+          </svg> */}
         </div>
 
         <ValidationError errors={state.errors} />

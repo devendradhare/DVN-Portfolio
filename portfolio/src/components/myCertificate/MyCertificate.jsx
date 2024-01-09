@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Style from "./myCertificate.module.css";
 import c_certificate from "./certificates/C_Language.svg";
 import cpp from "./certificates/CPP_With_STL.svg";
@@ -8,7 +8,7 @@ const MyCertificate = ({ left, top }) => {
   return (
     <>
       <section className={Style.myCertificateSection} style={{ left, top }}>
-        <span>Certificates</span>
+        <span className={Style.tital}>Certificates</span>
         <div className={Style.titalDiv}>
           <p style={{ width: "315px" }} className={Style.certificateTital}>
             Achieved proficiency in 'C Language' during the period spanning

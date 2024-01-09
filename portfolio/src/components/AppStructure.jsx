@@ -66,24 +66,11 @@ const AppStructure = () => {
             development.
           </p>
 
-          <Button
-            // go to contact me zone
-            onClick={() => {
-              setPointX(-100);
-              setPointY(550);
-              setScale(1);
-            }}
-            variant="outlined"
-            color="primary"
-            style={{ position: "absolute", top: "-160px", left: "0" }}
-          >
-            contect
-          </Button>
 
-          <ContactMe />
+          <ContactMe left={"500px"} top={"1500px"} />
           <Social />
-          <MyProjects />
-          <MyCertificate left={"-50px"} top={"700px"} />
+          <MyProjects left={"-1250px"} top={"650px"} />
+          <MyCertificate left={"400px"} top={"850px"} />
           <Resume left={"-950px"} top={"430px"} />
           <Skills />
           <HowToNavigate left={"-1700px"} top={"10px"} />
@@ -103,20 +90,20 @@ const AppStructure = () => {
             />
 
             {/* node: wave hand ----to---- contect me */}
-            <path
+            {/* <path
               d={`M-125,-120 c100,90 40,-150 160,-50`}
               fill="none"
               stroke="white"
               strokeWidth="4"
-            />
+            /> */}
 
             {/* node: contect button ----to---- contect zone */}
-            <path
+            {/* <path
               d={`M90,-110 C250,100 300,-500 380,-430`}
               fill="none"
               stroke="white"
               strokeWidth="4"
-            />
+            /> */}
             {/* <path
             d={`M570,-450 c0,0 100,-50 60, 35`}
             fill="none"
@@ -163,14 +150,14 @@ const AppStructure = () => {
             />
             {/* Node: project word ---to--- project zone */}
             <path
-              d={`M-430, 180 c120,280 -200,100 -160,360`}
+              d={`M-430, 180 c120,280 -200,100 -160,460`}
               fill="none"
               stroke="white"
               strokeWidth="4"
             />
             {/* Node: skills bracket ---to--- certificats zone */}
             <path
-              d={`M260,460 c-800,0 -210,150 -220, 230`}
+              d={`M860,390 c800,90 110,150 120, 430`}
               fill="none"
               stroke="white"
               strokeWidth="4"

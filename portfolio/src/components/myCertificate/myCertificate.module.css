@@ -1,9 +1,12 @@
 .myCertificateSection {
     position: absolute;
-    font-size: 40px;
+    font-size: 50px;
     overflow: visible;
     width: 1310px;
     /* background: #0000005c; */
+}
+.tital{
+    margin: 0 40%;
 }
 
 .certificateImg {

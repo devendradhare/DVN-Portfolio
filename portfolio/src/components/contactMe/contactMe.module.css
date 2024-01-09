@@ -32,20 +32,32 @@
 
 .antennaSvg {
     /* background: #000; */
-    transform-origin: 32px 70px;
-    animation: antennaSvgAnm 3.5s ease-out infinite;
+    transform-origin: 34% 74%;
+    animation: antennaSvgAnm 10s ease-in infinite;
     animation-direction: alternate;
 }
 
 .antennaSvgPosition {
-    width: 95px;
-    top: 48px;
-    left: 385px;
+    width: 200px;
+    top: -38px;
+    left: 550px;
 }
 
 @keyframes antennaSvgAnm {
-    100% {
+    25% {
+
         transform: rotateZ(-30deg);
+    }
+    
+    50% {
+        transform: rotateZ(-30deg);
+    }
+    75% {
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+
     }
 }
 
