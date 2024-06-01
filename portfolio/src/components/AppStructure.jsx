@@ -73,7 +73,7 @@ const AppStructure = () => {
           <MyProjects left={"-1250px"} top={"650px"} />
           <MyCertificate left={"400px"} top={"850px"} />
           <Skills />
-          <ContactMe left={"500px"} top={"1500px"} />
+          <ContactMe left={"250px"} top={"-300px"} />
           {innerWidth >= 770 && <HowToNavigate left={"-1700px"} top={"10px"} />}
 
           <svg

@@ -28,9 +28,9 @@
 }
 
 @media screen and (max-width: 850px) {
-    .buttons {
+    /* .buttons {
         display: none;
-    }
+    } */
     /* .navbarSection{
         display: none;
     } */
