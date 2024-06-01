@@ -70,10 +70,73 @@ a:hover {
 }
 
 .aboutMe {
-    position: absolute;
+    /* background: red; */
+    /* width: 100%;
+    height: 100%; */
+    font-size: 2rem;
+
+    /* position: absolute; */
     left: -950px;
     top: -200px;
+
     display: flex;
     align-items: center;
     overflow: visible;
+}
+
+.aboutMe>img {
+    height: 200px;
+    margin: 0 2rem;
+}
+
+@media screen and (max-width: 770px) {
+    .aboutMe {
+        margin-top: 40px;
+        padding: 20px;
+        flex-direction: column;
+        align-items: start;
+        /* width: 100%; */
+        overflow: visible;
+        width: 100vw;
+    }
+
+    .aboutMe>img {
+        display: inline-block;
+        width: 60vw;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .aboutMeSvg {
+        display: none;
+    }
+
+    h2 {
+        font-size: 8vw;
+        width: 100%;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 8vw;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.aboutMeText {
+    font-size: 1rem;
+}
+
+.aboutMeSvg {
+    position: relative;
+    overflow: visible;
+    left: -250px;
+}
+
+.gradientName {
+    margin-left: 7px;
+    background: -webkit-linear-gradient(135deg, rgb(0, 255, 164), rgb(166, 104, 255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }

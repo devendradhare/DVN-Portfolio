@@ -3,41 +3,27 @@ import React from "react";
 import TicTacToeScreenshort from "./projectImgs/tic_tac_toe_screenshort.png";
 import LiveBusScreenshort from "./projectImgs/LiveBus.png";
 import MyPortfolio from "./projectImgs/MyPortfolio.png";
+import currencyExchange from "./projectImgs/currencyExchange.jpg";
 // Styles
 import Style from "./myProjects.module.css";
 
-const Project = ({ tital, discription, image, layout = 0 }) => {
+const Project = ({ tital, discription, image, usedTech }) => {
   return (
     <div className={Style.projectsDiv}>
-      {layout === 0 ? (
-        <>
-          <div>
-            <img
-              style={{ border: "1px solid white", maxHeight: "300px" }}
-              src={image}
-              alt="toc-tac-toe-screenshort.jpg"
-            />
+      <span className={Style.projectTital}>{tital}</span>
+      <div className={Style.imgDiv}>
+        <img src={image} alt="toc-tac-toe-screenshort.jpg" />
+      </div>
+      <div>
+        <p>
+          {discription}
+          <div className={Style.usedTech}>
+            {usedTech.map((techName) => (
+              <div>{techName}</div>
+            ))}
           </div>
-          <div>
-            <span className={Style.projectTital}>{tital}</span>
-            <p>{discription}</p>
-          </div>
-        </>
-      ) : (
-        <>
-          <div>
-            <span className={Style.projectTital}>{tital}</span>
-            <p>{discription}</p>
-          </div>
-          <div>
-            <img
-              style={{ border: "1px solid white", maxHeight: "300px" }}
-              src={image}
-              alt="toc-tac-toe-screenshort.jpg"
-            />
-          </div>
-        </>
-      )}
+        </p>
+      </div>
     </div>
   );
 };
@@ -59,11 +45,12 @@ const MyProjects = ({ top, left }) => {
       </p>
 
       <Project
-        tital={"Smart Tic-Tac-Toi"}
-        image={TicTacToeScreenshort}
+        tital={"currency exchange rates"}
+        image={currencyExchange}
         discription={
-          "Implemented the classic game of Tic-Tac-Toe using the C programminglanguage. This project demonstrates proficiency in algorithmicthinking and logic implementation. The game is designed to run in a console environment, providing a simple yet effective demonstration ofcoding skills in C."
+          "This React and CSS project tracks real-time exchange rates for all global currencies. It features an interactive world map that shows current exchange rates when you hover over any country. Ideal for monitoring global currency trends effortlessly."
         }
+        usedTech={["react", "css", "svg maps", "currency exchange API"]}
       />
       <Project
         tital={"Live Bus Tracker"}
@@ -71,7 +58,7 @@ const MyProjects = ({ top, left }) => {
         discription={
           "The College Bus Tracking Web App is a sophisticated real-time trackingsystem designed to enhance the safety and convenience of college bustransportation. This application allows users, including students andbus drivers, to effortlessly monitor the precise location of collegebuses and track the whereabouts of individual students."
         }
-        layout={1}
+        usedTech={["react", "css", "node", "express"]}
       />
       <Project
         tital={"My Portfolio"}
@@ -79,14 +66,23 @@ const MyProjects = ({ top, left }) => {
         discription={
           "this the my portfolio website you are currently visiting in, Inspiredby the functionality of Google Maps, my portfolio provides a uniqueuser experience. Similar to navigating Google Maps, users can zoom inand out on the page. By scrolling up, you can zoom out to get anoverview, and then zoom in on the specific content you wish toexplore."
         }
+        usedTech={["react", "css", "contextAPI"]}
+      />
+      <Project
+        tital={"Smart Tic-Tac-Toi"}
+        image={TicTacToeScreenshort}
+        discription={
+          "Implemented the classic game of Tic-Tac-Toe using the C programminglanguage. This project demonstrates proficiency in algorithmicthinking and logic implementation. The game is designed to run in a console environment, providing a simple yet effective demonstration ofcoding skills in C."
+        }
+        usedTech={["c programming"]}
       />
 
       {/* <div
         className={Style.projectsDiv}
         style={{ left: "-250px", top: "400px" }}
       >
-        <div
-          style={{
+      <div
+      style={{
             // position: "absolute",
             width: "500px",
             left: "130px",

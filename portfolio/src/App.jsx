@@ -1,4 +1,3 @@
-import "./App.css";
 import { MovementProvider } from "./context/movement.jsx";
 
 // components

@@ -14,10 +14,30 @@ export const MovementProvider = (props) => {
   const [pointX, setPointX] = useState(1000);
   const [pointY, setPointY] = useState(310);
   const [start, setStart] = useState({ x: 0, y: 0 });
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   // keybord keys
   const [arrowKeyPressed, setArrowKeyPressed] = useState(null);
 
   const [notInsideAnyElement, setNotInsideAnyElement] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setInnerWidth(window.innerWidth);
+    };
+    if (innerWidth <= 770) {
+      setScale(1);
+      setPointX(0);
+      setPointY(0);
+    }
+
+    // Add event listener for resize
+    window.addEventListener("resize", handleResize);
+
+    // Remove event listener on cleanup
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     // boundation
@@ -84,7 +104,15 @@ export const MovementProvider = (props) => {
   const setTransform = () => {
     const zoomElement = document.getElementById(styles.zoom);
     // if (zoomElement) {
+    if (innerWidth <= 770) {
+      zoomElement.style.transform = `none`;
+      zoomElement.style.overflow = `scroll`;
+      zoomElement.style.height = `100%`;
+      return;
+    }
     zoomElement.style.transform = `translate(${pointX}px, ${pointY}px) scale(${scale})`;
+    zoomElement.style.overflow = `visible`;
+    zoomElement.style.height = `none`;
     {
       // moving bg position on mouse move
       // }
@@ -102,6 +130,7 @@ export const MovementProvider = (props) => {
     e.preventDefault();
     setStart({ x: e.clientX - pointX, y: e.clientY - pointY });
     setPanning(true);
+    console.log(-window.screenX, window.screenY, window);
   };
 
   const handleMouseUp = () => {
@@ -111,7 +140,7 @@ export const MovementProvider = (props) => {
   const handleMouseMove = (e) => {
     e.preventDefault();
     // console.log(e.clientX - start.x, e.clientY - start.y);
-    if (!panning) {
+    if (!panning || innerWidth <= 770) {
       return;
     }
 
@@ -121,6 +150,12 @@ export const MovementProvider = (props) => {
   };
 
   const handleWheel = (e) => {
+    if (innerWidth <= 770) {
+      setScale(1);
+      // setPointX(0);
+      // setPointY(0);
+      return;
+    }
     // e.preventDefault();
     const delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
     const newScale = delta > 0 ? scale * 1.05 : scale / 1.05;
@@ -147,7 +182,7 @@ export const MovementProvider = (props) => {
 
   const handleTouchMove = (e) => {
     // e.preventDefault();
-    if (!panning) {
+    if (!panning || innerWidth <= 770) {
       return;
     }
 
@@ -186,6 +221,7 @@ export const MovementProvider = (props) => {
           handleTouchEnd,
           notInsideAnyElement,
           setNotInsideAnyElement,
+          innerWidth,
         }}
       >
         {props.children}

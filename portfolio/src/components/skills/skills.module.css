@@ -1,15 +1,33 @@
-.MySkills {
-    top: 250px;
-    left: 150px;
+.MySkillsSection {
+    overflow: visible;
+    top: 150px;
+    left: 200px;
 }
+
 .skills {
     /* background: rgb(43, 45, 45); */
-    position: absolute;
+    position: relative;
     width: 600px;
     display: flex;
     align-items: center;
+    margin-bottom: 40px;
 }
-.zone {
-    font-size: 40px;
-    position: absolute;
+
+.skills>h3 {
+    min-width: 120px;
+}
+
+@media screen and (max-width: 770px) {
+    .skills {
+        width: 100vw;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .skills>h3 {
+        width: 100vw;
+    }
 }

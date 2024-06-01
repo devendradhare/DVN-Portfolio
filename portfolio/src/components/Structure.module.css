@@ -9,7 +9,7 @@
 }
 
 #zoom_outerid>p {
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     flex-direction: column;
 }
@@ -22,9 +22,13 @@
     /* cursor: grab; */
     overflow: visible;
 
-    /* width: 600px; */
     display: inline-block;
-    /* height: 100px; */
+}
+
+@media screen and (min-width: 770px) {
+    #zoom>* {
+        position: absolute;
+    }
 }
 
 /* delete it */
@@ -44,14 +48,26 @@
     left: -500px;
     top: 100px;
     width: 550px;
-    position: absolute;
+    /* position: absolute; */
     text-align: center;
     font-size: 20px;
     line-height: 24px;
     font-family: 'Patrick Hand SC', cursive;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 770px) {
+    .objective {
+        width: calc(100vw - 20px);
+        text-align: justify;
+        padding: 10px;
+    }
+
+
+
+
+
+
+
     .diviceNotice {
         display: flex;
         background: rgba(0, 0, 0, 0.93);

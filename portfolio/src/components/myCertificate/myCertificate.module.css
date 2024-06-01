@@ -1,11 +1,12 @@
 .myCertificateSection {
-    position: absolute;
+    /* position: absolute; */
     font-size: 50px;
     overflow: visible;
     width: 1310px;
     /* background: #0000005c; */
 }
-.tital{
+
+.tital {
     margin: 0 40%;
 }
 
@@ -18,14 +19,43 @@
     font-size: 20px;
     text-align: center;
     display: inline-block;
-    margin: 20px;
+    margin: 0 20px;
+    width: 50vw;
 }
 
 .titalDiv {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    /* flex-direction: column; */
+    flex-wrap: wrap;
 }
-.images{
+
+.titalDiv>div {
+    /* width: 50%; */
     display: flex;
     align-items: center;
+    flex-direction: column;
+}
+.titalDiv>div>img {
+    max-width: 300px;
+}
+
+@media screen and (max-width:770px) {
+    .myCertificateSection {
+        width: 100vw;
+    }
+    .certificateTital {
+        width: calc(100vw - 40px);
+        margin: 0 20px;
+    }
+    .titalDiv>div>img {
+        width: calc(100vw - 40px);
+        margin: 0 20px 40px 20px;
+    }
+    .tital{
+        display: inline-block;
+        width: 100vw;
+        margin: 0;
+        text-align: center;
+    }
 }

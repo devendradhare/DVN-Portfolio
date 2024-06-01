@@ -1,5 +1,5 @@
 .projectSection {
-    position: absolute;
+    /* position: absolute; */
     font-size: 23px;
     display: flex;
     flex-direction: column;
@@ -22,6 +22,13 @@
     /* background: #000; */
     word-wrap: break-word;
     margin: 20px 0;
+
+    border: 1px solid gray;
+}
+
+.imgDiv>img {
+    border: 1px solid white;
+    max-width: 90%;
 }
 
 .projectsDiv>div {
@@ -39,4 +46,48 @@
 .projectTital {
     display: inline-block;
     margin-bottom: 30px;
+    text-align: center;
+}
+
+.usedTech {
+    margin: 10px 0 ;
+    width: 100%;
+}
+
+.usedTech > div{
+    display: inline-block;
+    border: 1px solid rgb(230, 230, 230);
+    padding: 5px 10px;
+    margin: 0 10px;
+    background: rgb(54, 95, 107);
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 770px) {
+    .projectSection {
+        /* position: static; */
+        width: 100vw;
+        text-align: justify;
+    }
+    
+    .projectSection>P {
+        width: calc(100% - 20px);
+        padding: 0 10px;
+    }
+
+    .projectsDiv {
+        flex-direction: column;
+        font-size: 5vw;
+    }
+    
+    .projectsDiv>div {
+        width: 100%;
+        
+    }
+    
+    .projectsDiv>div>p {
+        padding: 0 20px 20px 20px;
+    }
 }

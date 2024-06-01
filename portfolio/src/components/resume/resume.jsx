@@ -9,7 +9,7 @@ const Resume = ({ left, top }) => {
         style={{
           left,
           top,
-          position: "absolute",
+          // position: "absolute",
           fontSize: "30px",
           cursor: "pointer",
           margin: "0 10px",

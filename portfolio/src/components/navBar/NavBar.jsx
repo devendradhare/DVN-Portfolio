@@ -87,7 +87,7 @@ const NavBar = () => {
           resume
         </Button>
       </div>
-      <div className={styles.sliderDiv}>
+      {/* <div className={styles.sliderDiv}>
         <span className={styles.zoomSpan}>ZOOM </span>
         <Slider
           size="small"
@@ -99,7 +99,7 @@ const NavBar = () => {
           valueLabelDisplay="auto"
           onChange={(e, value) => setScale((value / 100) * 2.5)}
         />
-      </div>
+      </div> */}
     </nav>
   );
 };

@@ -1,5 +1,5 @@
 .contactMeSection {
-    position: absolute;
+    /* position: absolute; */
     font-size: 36px;
     overflow: visible;
     width: 360px;
@@ -39,23 +39,38 @@
 
 .antennaSvgPosition {
     width: 200px;
+    overflow: visible;
+    
+    position: absolute;
     top: -38px;
     left: 550px;
 }
 
+.baseAntennaSvgPosition {
+    width: 200px;
+    overflow: visible;
+
+    position: absolute;
+    top: -38px;
+    left: 550px;
+    
+}
+
 @keyframes antennaSvgAnm {
     25% {
-
+        
         transform: rotateZ(-30deg);
     }
     
     50% {
         transform: rotateZ(-30deg);
     }
+    
     75% {
         transform: rotateZ(0deg);
     }
-    100%{
+
+    100% {
         transform: rotateZ(0deg);
 
     }
@@ -68,5 +83,25 @@
 @keyframes dvn {
     0% {
         d: path("")
+    }
+}
+
+@media screen and (max-width:770px) {
+    .contactMeSection {
+        width: calc(100vw - 60px);
+        padding: 30px;
+    }
+    .sendBtn {
+        position: static;
+    }
+    
+    .antennaSvgPosition {
+        position: static;
+    }
+    
+    .baseAntennaSvgPosition {
+        position: relative;
+        top: -212px;
+        left: 0;
     }
 }

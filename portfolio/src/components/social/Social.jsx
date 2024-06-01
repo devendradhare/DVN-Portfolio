@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 // icons
 import instagramIcon from "../icons/instagram.svg";
 import githubIcon from "../icons/github.svg";
@@ -18,7 +18,7 @@ const Icons = ({ href, imgSrc, IconName }) => {
     </div>
   );
 };
-const Social = () => {
+const Social = ({ left, top }) => {
   const [mailCopyedIndicator, setMailCopyedIndicator] = useState(false);
   const handleCopyingEmail = () => {
     navigator.clipboard
@@ -37,7 +37,7 @@ const Social = () => {
     <>
       <section
         className={Style.socialSection}
-        style={{ left: "-870px", top: "50px" }}
+        // style={{ left, top }}
       >
         <Icons
           href="https://www.instagram.com/devendra_dhare22/"

@@ -28,18 +28,20 @@ const AppStructure = () => {
     handleTouchStart,
     handleTouchMove,
     handleTouchEnd,
+    innerWidth,
   } = useMovement();
-  const [diviceNotice, setDiviceNotice] = useState(true);
+  const [diviceNotice, setDiviceNotice] = useState(false);
 
   return (
     <>
-      <NavBar></NavBar>
+      {innerWidth >= 770 && <NavBar></NavBar>}
       <section className={diviceNotice ? Style.diviceNotice : " "}>
         <div>
           <p>For a better experience, open it on your computer</p>
           <button onClick={() => setDiviceNotice(false)}>Open Anyway</button>
         </div>
       </section>
+
       <div
         id={Style.zoom_outerid}
         onMouseMove={handleMouseMove}
@@ -56,7 +58,7 @@ const AppStructure = () => {
           <span>scale : {scale}</span>
           <span>key : {arrowKeyPressed}</span>
         </p> */}
-        {/* <AppBar />   */}
+
         <div id={Style.zoom}>
           <AboutMe className={Style.aboutMe} />
           <p className={Style.objective}>
@@ -66,14 +68,13 @@ const AppStructure = () => {
             development.
           </p>
 
-
-          <ContactMe left={"500px"} top={"1500px"} />
-          <Social />
+          <Social left={"-870px"} top={"50px"} />
+          <Resume left={"-950px"} top={"430px"} />
           <MyProjects left={"-1250px"} top={"650px"} />
           <MyCertificate left={"400px"} top={"850px"} />
-          <Resume left={"-950px"} top={"430px"} />
           <Skills />
-          <HowToNavigate left={"-1700px"} top={"10px"} />
+          <ContactMe left={"500px"} top={"1500px"} />
+          {innerWidth >= 770 && <HowToNavigate left={"-1700px"} top={"10px"} />}
 
           <svg
             className={`${Style.node}`}
