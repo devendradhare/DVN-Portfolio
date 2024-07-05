@@ -130,7 +130,7 @@ export const MovementProvider = (props) => {
     e.preventDefault();
     setStart({ x: e.clientX - pointX, y: e.clientY - pointY });
     setPanning(true);
-    console.log(-window.screenX, window.screenY, window);
+    // console.log(-window.screenX, window.screenY, window);
   };
 
   const handleMouseUp = () => {

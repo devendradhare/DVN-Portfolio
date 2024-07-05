@@ -18,8 +18,8 @@ const Project = ({ tital, discription, image, usedTech }) => {
         <p>
           {discription}
           <div className={Style.usedTech}>
-            {usedTech.map((techName) => (
-              <div>{techName}</div>
+            {usedTech.map((techName, index) => (
+              <div key={index}>{techName}</div>
             ))}
           </div>
         </p>

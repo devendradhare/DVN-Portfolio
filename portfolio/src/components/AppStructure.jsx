@@ -11,6 +11,7 @@ import MyProjects from "./myProjects/MyProjects";
 import MyCertificate from "./myCertificate/MyCertificate";
 import Resume from "./resume/Resume";
 import HowToNavigate from "./howToNavigate/HowToNavigate";
+import NavHelp from './nevHelp/NavHelp';
 // MUI components
 import Button from "@mui/material/Button";
 // context api
@@ -74,8 +75,10 @@ const AppStructure = () => {
           <MyCertificate left={"400px"} top={"850px"} />
           <Skills />
           <ContactMe left={"250px"} top={"-300px"} />
-          {innerWidth >= 770 && <HowToNavigate left={"-1700px"} top={"10px"} />}
+          {/* {innerWidth >= 770 && <HowToNavigate left={"-1700px"} top={"10px"} />} */}
 
+          <NavHelp/>
+          
           <svg
             className={`${Style.node}`}
             width="1"
@@ -169,6 +172,13 @@ const AppStructure = () => {
               fill="none"
               stroke="white"
               strokeWidth="2"
+            />
+            {/* Node: profile pic ---to--- how to navigate */}
+            <path
+              d={`M-900,-100 c-200,-100 50,90 -150, 20`}
+              fill="none"
+              stroke="white"
+              strokeWidth="4"
             />
           </svg>
         </div>

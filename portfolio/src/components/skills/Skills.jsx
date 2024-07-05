@@ -19,9 +19,9 @@ const SubSkills = ({ top, left, subTitle, skillArr }) => {
   return (
     <div className={styles.skills} style={{ top, left }}>
       <h3>{subTitle} : </h3>
-      {skillArr.map((skill) => {
+      {skillArr.map((skill, index) => {
         return (
-          <div style={{ display: "flex", margin: "0 20px" }}>
+          <div key={index} style={{ display: "flex", margin: "0 20px" }}>
             <img src={skill.logo} alt="react logo" />
             <div style={{ margin: "0 15px" }}>
               <div>{skill.name}</div>
