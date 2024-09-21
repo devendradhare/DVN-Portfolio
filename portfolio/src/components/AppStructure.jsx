@@ -11,7 +11,7 @@ import MyProjects from "./myProjects/MyProjects";
 import MyCertificate from "./myCertificate/MyCertificate";
 import Resume from "./resume/Resume";
 import HowToNavigate from "./howToNavigate/HowToNavigate";
-import NavHelp from './nevHelp/NavHelp';
+import NavHelp from "./nevHelp/NavHelp";
 // MUI components
 import Button from "@mui/material/Button";
 // context api
@@ -35,7 +35,7 @@ const AppStructure = () => {
 
   return (
     <>
-      {innerWidth >= 770 && <NavBar></NavBar>}
+      {/* {innerWidth >= 770 && <NavBar></NavBar>} */}
       <section className={diviceNotice ? Style.diviceNotice : " "}>
         <div>
           <p>For a better experience, open it on your computer</p>
@@ -58,9 +58,15 @@ const AppStructure = () => {
           <span>pointY : {pointY}</span>
           <span>scale : {scale}</span>
           <span>key : {arrowKeyPressed}</span>
-        </p> */}
+          </p> */}
 
-        <div id={Style.zoom}>
+        <div
+          id={Style.zoom}
+          // style={{
+          //   perspective: "500px",
+          //   transformStyle: "preserve-3d",
+          // }}
+        >
           <AboutMe className={Style.aboutMe} />
           <p className={Style.objective}>
             Welcome to my portfolio! I am a passionate Full Stack Web Developer
@@ -69,16 +75,118 @@ const AppStructure = () => {
             development.
           </p>
 
+          <div
+            style={{
+              top: "-850px",
+              left: "-500px",
+              fontSize: "25px",
+              // border: "1px solid white",
+              width: "800px",
+              height: "690px",
+              zIndex: "-1",
+              // overflow: "visible",
+            }}
+          >
+            <img
+              src="/trees/tree05.png"
+              alt="colorfull tree"
+              srcset=""
+              style={{
+                width: "100%",
+                // transform: "rotateY(30deg) translateZ (100px)",
+              }}
+            />
+          </div>
+          <div
+            style={{
+              top: "-750px",
+              left: "-1500px",
+              fontSize: "25px",
+              // border: "1px solid white",
+              width: "800px",
+              height: "780px",
+              zIndex: "-1",
+            }}
+          >
+            <img
+              src="/trees/tree02.png"
+              alt="colorfull tree"
+              srcset=""
+              style={{ width: "100%" }}
+            />
+          </div>
+          <div
+            style={{
+              top: "150px",
+              left: "-500px",
+              fontSize: "25px",
+              // border: "1px solid white",
+              width: "800px",
+              height: "780px",
+              zIndex: "-1",
+            }}
+          >
+            <img
+              src="/trees/tree01.png"
+              alt="colorfull tree"
+              srcset=""
+              style={{ width: "100%" }}
+            />
+          </div>
+          <div
+            style={{
+              top: "350px",
+              left: "-2500px",
+              fontSize: "25px",
+              // border: "1px solid white",
+              width: "800px",
+              height: "780px",
+              zIndex: "-1",
+            }}
+          >
+            <img
+              src="/trees/tree03.png"
+              alt="colorfull tree"
+              srcset=""
+              style={{ width: "100%" }}
+            />
+          </div>
+
+          <div
+            style={{
+              top: "-260px",
+              left: "980px",
+              fontSize: "25px",
+              // border: "1px solid white",
+              width: "320px",
+              // height: "870px",
+              zIndex: "1",
+              display: "flex",
+              overflow: "visible",
+            }}
+          >
+            {Array(1)
+              .fill(0)
+              .map((_, index) => (
+                <img
+                  src={`/trees/tree0${index}.png`}
+                  alt="colorfull tree"
+                  srcset=""
+                  style={{ minWidth: "500px" }}
+                />
+              ))}
+          </div>
+
           <Social left={"-870px"} top={"50px"} />
           <Resume left={"-950px"} top={"430px"} />
-          <MyProjects left={"-1250px"} top={"650px"} />
-          <MyCertificate left={"400px"} top={"850px"} />
+          <MyProjects left={"-600px"} top={"650px"} />
+          <MyCertificate left={"1200px"} top={"850px"} />
           <Skills />
           <ContactMe left={"250px"} top={"-300px"} />
-          {/* {innerWidth >= 770 && <HowToNavigate left={"-1700px"} top={"10px"} />} */}
+          {innerWidth >= 770 && <HowToNavigate left={"-1700px"} top={"10px"} />}
 
-          <NavHelp/>
-          
+          {/* <NavHelp /> */}
+
           <svg
             className={`${Style.node}`}
             width="1"
@@ -161,7 +269,7 @@ const AppStructure = () => {
             />
             {/* Node: skills bracket ---to--- certificats zone */}
             <path
-              d={`M860,390 c800,90 110,150 120, 430`}
+              d={`M860,390 c800,90 110,150 920, 430`}
               fill="none"
               stroke="white"
               strokeWidth="4"
@@ -173,9 +281,27 @@ const AppStructure = () => {
               stroke="white"
               strokeWidth="2"
             />
-            {/* Node: profile pic ---to--- how to navigate */}
+            {/* Node: tree root ---to--- project 1 */}
             <path
-              d={`M-900,-100 c-200,-100 50,90 -150, 20`}
+              d={`M-400,950 c-100,100 -900,100 -850, 200`}
+              fill="none"
+              stroke="white"
+              strokeWidth="4"
+            />
+            <path
+              d={`M-350,955 c-100,100 -200,100 -250, 190`}
+              fill="none"
+              stroke="white"
+              strokeWidth="4"
+            />
+            <path
+              d={`M-200,960 c-100,100 -200,100 200, 180`}
+              fill="none"
+              stroke="white"
+              strokeWidth="4"
+            />
+            <path
+              d={`M0,950 c-100,100 500,100 550, 180`}
               fill="none"
               stroke="white"
               strokeWidth="4"

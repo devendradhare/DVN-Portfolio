@@ -5,7 +5,12 @@
     position: absolute;
     top: 0;
     background: rgb(26, 30, 35);
+    background-image: url("/bg/bg04.svg");
+    /* background-image: url("/bg/bg.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Patrick Hand SC', cursive;
+    font-family: sans-serif;
 }
 
 #zoom_outerid>p {
@@ -23,6 +28,7 @@
     overflow: visible;
 
     display: inline-block;
+
 }
 
 @media screen and (min-width: 770px) {
@@ -47,12 +53,13 @@
 .objective {
     left: -500px;
     top: 100px;
-    width: 550px;
+    width: 700px;
     /* position: absolute; */
-    text-align: center;
+    /* text-align: center; */
     font-size: 20px;
     line-height: 24px;
-    font-family: 'Patrick Hand SC', cursive;
+    /* font-family: 'Patrick Hand SC', cursive; */
+    font-family: sans-serif;
 }
 
 @media screen and (max-width: 770px) {
@@ -84,7 +91,8 @@
     }
 
     .diviceNotice button {
-        font-family: 'Patrick Hand SC', cursive;
+        /* font-family: 'Patrick Hand SC', cursive; */
+        font-family: sans-serif;
         border: none;
         background: none;
         height: 100px;

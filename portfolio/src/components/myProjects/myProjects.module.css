@@ -17,6 +17,10 @@
     margin: 20px 0;
 }
 
+.projectsDiv * {
+
+    border: 1px solid gray;
+}
 .projectsDiv {
     display: flex;
     /* background: #000; */

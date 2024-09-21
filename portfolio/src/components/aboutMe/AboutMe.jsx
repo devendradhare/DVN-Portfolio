@@ -2,6 +2,7 @@ import React from "react";
 import Style from "./AboutMe.module.css";
 import me from "./main.png";
 import { Box } from "@mui/material";
+import { animated, useSpring } from "@react-spring/web";
 
 function EmojiBullet({ emoji, text }) {
   return (
@@ -24,15 +25,55 @@ function EmojiBullet({ emoji, text }) {
     </Box>
   );
 }
+
+const BounceAnimation = ({ children, ...props }) => {
+  const [bounce, bounceApi] = useSpring(() => ({
+    config: { mass: 1, tension: 150, friction: 10 },
+  }));
+
+  const handleMouseDown = () => {
+    bounceApi.start({ transform: "scale(1)" });
+  };
+
+  const handleMouseUp = () => {
+    bounceApi.start({
+      transform: "scale(1.05)",
+    });
+  };
+
+  const handleMouseOver = () => {
+    console.log("mouuse over");
+    bounceApi.start({ transform: "scale(1.05)" });
+  };
+
+  const handleMouseLeave = () => {
+    bounceApi.start({ transform: "scale(1)" });
+  };
+
+  const animatedComp = React.Children.map(children, (child) => {
+    return React.cloneElement(child, {
+      onMouseDown: handleMouseDown,
+      onMouseUp: handleMouseUp,
+      onMouseLeave: handleMouseLeave,
+      onMouseOver: handleMouseOver,
+      ...props,
+      style: { ...props.style, ...bounce },
+    });
+  });
+
+  return <>{animatedComp}</>;
+};
 export default function AboutMe() {
   return (
     <div className={Style.aboutMe}>
-      <img
-        className={Style.shadowed}
-        alt={"image of developer"}
-        src={me}
-        // style={{ height: "200px", margin: "0 2rem" }}
-      />
+      <BounceAnimation>
+        <animated.img
+          className={Style.shadowed}
+          alt={"image of developer"}
+          src={me}
+          // style={{ height: "200px", margin: "0 2rem" }}
+        />
+      </BounceAnimation>
 
       <svg
         // className={`${styles.node}`}
@@ -61,7 +102,7 @@ export default function AboutMe() {
           <span className={Style.gradientName}>Devendra dhare</span>
           <span className={Style.hand}>🤚</span>
         </h1>
-        <h2>I'm a Full Stack Web Developer."</h2>
+        <h2>I'm a Full Stack Web Developer.</h2>
         {/* <Box component={"ul"} p={"0.8rem"}>
           <EmojiBullet emoji="☕" text="fueled by coffee" />
           <EmojiBullet emoji="🌎" text="based in the Indore MP" />

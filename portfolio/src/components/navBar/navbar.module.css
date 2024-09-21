@@ -4,7 +4,11 @@
     width: 100%;
     display: flex;
     background: #00000096;
+    /* border: 1px solid white; */
     align-items: center ;
+
+    display: flex;
+    justify-content: center;
 }
 
 .sliderDiv{
@@ -17,7 +21,8 @@
 }
 
 .zoomSpan {
-    font-family: 'Patrick Hand SC', cursive;
+    /* font-family: 'Patrick Hand SC', cursive; */
+    /* font-family: sans-serif; */
     color: white;
 }
 
