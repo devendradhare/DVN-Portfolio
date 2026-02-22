@@ -9137,6 +9137,7 @@ const vm = "_zoom_outerid_119se_1",
     aboutMeText: Nm,
     gradientName: Tm,
   },
+  Im = ".assets/main-176cb9a5.png";
   Im = "./assets/main-176cb9a5.png";
 var np = { exports: {} },
   Mm = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED",
