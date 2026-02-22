@@ -93,7 +93,7 @@ const AppStructure = () => {
               strokeWidth="4"
             />
 
-            {/* node: wave hand ----to---- contect me */}
+            {/* node: wave hand ----to---- contact me */}
             {/* <path
               d={`M-125,-120 c100,90 40,-150 160,-50`}
               fill="none"
@@ -101,7 +101,7 @@ const AppStructure = () => {
               strokeWidth="4"
             /> */}
 
-            {/* node: contect button ----to---- contect zone */}
+            {/* node: contact button ----to---- contact zone */}
             {/* <path
               d={`M90,-110 C250,100 300,-500 380,-430`}
               fill="none"
