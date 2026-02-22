@@ -18,8 +18,8 @@ const NavBar = () => {
           setPointY(350);
           setScale(1);
         }}
-        sx={{ margin: "0 5px" }}
-        variant="outlined"
+        sx={{ margin: "0 5px", color: "white" }}
+        variant=""
         color="primary"
         endIcon={<HomeOutlinedIcon />}
       >
